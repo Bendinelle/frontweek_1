@@ -30,6 +30,15 @@ function smoothScroll(e) {
   }, 500);
 }
 
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const message = document.createElement('p');
+  message.textContent = 'Formulário enviado!';
+  form.appendChild(message);
+});
+
 function showSlides() {
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
